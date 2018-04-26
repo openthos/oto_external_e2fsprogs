@@ -114,6 +114,7 @@ cc_binary {
 
     shared_libs: tune2fs_libs,
     system_shared_libs: ["libc", "libdl"],
+    symlinks: ["e2label"],
 }
 
 cc_binary {
