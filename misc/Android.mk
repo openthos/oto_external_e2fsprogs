@@ -33,6 +33,7 @@ LOCAL_SYSTEM_SHARED_LIBRARIES := $(mke2fs_system_shared_libraries)
 LOCAL_SHARED_LIBRARIES := $(mke2fs_shared_libraries)
 LOCAL_MODULE := mke2fs
 LOCAL_MODULE_TAGS := optional
+LOCAL_POST_INSTALL_CMD := ln -sf $(LOCAL_MODULE) $(TARGET_OUT)/bin/mkfs.ext4
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
