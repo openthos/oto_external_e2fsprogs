@@ -8,7 +8,7 @@ resize2fs_src_files := \
 	sim_progress.c \
 	resource_track.c
 
-resize2fs_c_includes := external/e2fsprogs/lib
+resize2fs_c_includes := $(LOCAL_PATH)/../lib
 
 resize2fs_cflags := -O2 -g -W -Wall
 

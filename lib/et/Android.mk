@@ -7,7 +7,7 @@ libext2_com_err_src_files := \
 	com_err.c \
 	com_right.c
 
-libext2_com_err_c_includes := external/e2fsprogs/lib
+libext2_com_err_c_includes := $(LOCAL_PATH)/..
 
 libext2_com_err_cflags := -O2 -g -W -Wall
 

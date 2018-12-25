@@ -1,6 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 libext2_e2p_src_files := \
+	encoding.c \
 	feature.c \
 	fgetflags.c \
 	fsetflags.c \
@@ -24,7 +25,7 @@ libext2_e2p_src_files := \
 	ostype.c \
 	percent.c
 
-libext2_e2p_c_includes := external/e2fsprogs/lib
+libext2_e2p_c_includes := $(LOCAL_PATH)/..
 
 libext2_e2p_cflags := -O2 -g -W -Wall
 

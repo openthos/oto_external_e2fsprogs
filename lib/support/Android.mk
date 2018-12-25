@@ -12,7 +12,7 @@ libext2_quota_src_files := \
 	quotaio_tree.c \
 	quotaio_v2.c
 
-libext2_quota_c_includes := external/e2fsprogs/lib
+libext2_quota_c_includes := $(LOCAL_PATH)/..
 
 libext2_quota_cflags := -O2 -g -W -Wall
 
@@ -67,7 +67,7 @@ libext2_profile_shared_libraries := \
 
 libext2_profile_system_shared_libraries := libc
 
-libext2_profile_c_includes := external/e2fsprogs/lib
+libext2_profile_c_includes := $(LOCAL_PATH)/..
 
 libext2_profile_cflags := -O2 -g -W -Wall
 

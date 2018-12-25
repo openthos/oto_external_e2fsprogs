@@ -10,7 +10,7 @@ mke2fs_src_files := \
 	create_inode.c
 
 mke2fs_c_includes := \
-	external/e2fsprogs/e2fsck
+	$(LOCAL_PATH)/../e2fsck
 
 mke2fs_cflags := -O2 -g -W -Wall
 
@@ -55,7 +55,7 @@ tune2fs_src_files := \
 	util.c
 
 tune2fs_c_includes := \
-	external/e2fsprogs/e2fsck
+	$(LOCAL_PATH)/../e2fsck
 
 tune2fs_cflags := -O2 -g -W -Wall -DNO_RECOVERY
 
@@ -181,7 +181,7 @@ chattr_src_files := \
 	chattr.c
 
 chattr_c_includes := \
-	external/e2fsprogs/lib
+	$(LOCAL_PATH)/../lib
 
 chattr_cflags := -O2 -g -W -Wall
 
@@ -224,7 +224,7 @@ lsattr_src_files := \
 	lsattr.c
 
 lsattr_c_includes := \
-	external/e2fsprogs/lib
+	$(LOCAL_PATH)/../lib
 
 lsattr_cflags := -O2 -g -W -Wall
 
@@ -313,7 +313,7 @@ include $(BUILD_EXECUTABLE)
 e4crypt_src_files := e4crypt.c
 
 e4crypt_c_includes := \
-	external/e2fsprogs/lib
+	$(LOCAL_PATH)/../lib
 
 e4crypt_cflags := -O2 -g -W -Wall
 
@@ -352,7 +352,7 @@ e2image_src_files := \
 	e2image.c
 
 e2image_c_includes := \
-	external/e2fsprogs/lib
+	$(LOCAL_PATH)/../lib
 
 e2image_cflags := -O2 -g -W -Wall
 

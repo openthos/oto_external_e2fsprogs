@@ -1,4 +1,5 @@
 #ifndef __APPLE__
+#undef HAVE_MALLOC_H
 #define HAVE_MALLOC_H 1
 #endif
 

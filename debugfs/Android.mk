@@ -52,9 +52,9 @@ debugfs_static_libraries := \
 debugfs_system_static_libraries := libc
 
 debugfs_c_includes := \
-	external/e2fsprogs/e2fsck \
-	external/e2fsprogs/misc \
-	external/e2fsprogs/lib
+	$(LOCAL_PATH)/../e2fsck \
+	$(LOCAL_PATH)/../misc \
+	$(LOCAL_PATH)/../lib
 
 debugfs_cflags := -O2 -g -W -Wall -fno-strict-aliasing -DDEBUGFS
 

@@ -23,7 +23,7 @@ libext2_blkid_static_libraries := libext2_uuid_static
 
 libext2_blkid_system_static_libraries := libc
 
-libext2_blkid_c_includes := external/e2fsprogs/lib
+libext2_blkid_c_includes := $(LOCAL_PATH)/..
 
 libext2_blkid_cflags := -O2 -g -W -Wall -fno-strict-aliasing
 

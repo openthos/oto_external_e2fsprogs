@@ -16,7 +16,7 @@ libext2_ss_src_files := \
 	data.c \
 	get_readline.c
 
-libext2_ss_c_includes := external/e2fsprogs/lib
+libext2_ss_c_includes := $(LOCAL_PATH)/..
 
 libext2_ss_cflags := -O2 -g -W -Wall
 

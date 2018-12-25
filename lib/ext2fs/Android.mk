@@ -42,6 +42,7 @@ libext2fs_src_files := \
 	get_pathname.c \
 	getsize.c \
 	getsectsize.c \
+	hashmap.c \
 	i_block.c \
 	icount.c \
 	imager.c \
@@ -61,6 +62,9 @@ libext2fs_src_files := \
 	namei.c \
 	native.c \
 	newdir.c \
+	nls_ascii.c \
+	nls_utf8.c \
+	nls_utf8-norm.c \
 	openfs.c \
 	progress.c \
 	punch.c \
@@ -96,9 +100,10 @@ libext2fs_static_libraries := \
 
 libext2fs_system_static_libraries := libc
 
-libext2fs_c_includes := external/e2fsprogs/lib
+libext2fs_c_includes := $(LOCAL_PATH)/..
 
 libext2fs_cflags := -O2 -g -W -Wall -Wno-unused-parameter
+libext2fs_cflags += -std=c11
 
 include $(CLEAR_VARS)
 
@@ -116,7 +121,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(libext2fs_src_files)
-LOCAL_STATIC_LIBRARIES := $(libext2fs_static_libraries) $(libext2fs_system_static_libraries) libsparse libz
+LOCAL_STATIC_LIBRARIES := $(libext2fs_static_libraries) $(libext2fs_system_static_libraries) libsparse_static libz
 LOCAL_C_INCLUDES := $(libext2fs_c_includes)
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(libext2fs_c_includes)
 LOCAL_CFLAGS := $(libext2fs_cflags) $(libext2fs_cflags_linux)
@@ -129,7 +134,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(libext2fs_src_files)
 LOCAL_WHOLE_STATIC_LIBRARIES := libext2_com_err-host
-LOCAL_STATIC_LIBRARIES := libsparse libz
+LOCAL_STATIC_LIBRARIES := libsparse_host libz
 LOCAL_C_INCLUDES := $(libext2fs_c_includes)
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(libext2fs_c_includes)
 LOCAL_CFLAGS := $(libext2fs_cflags)
@@ -145,7 +150,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(libext2fs_src_files)
 LOCAL_WHOLE_STATIC_LIBRARIES := libext2_com_err-host
-LOCAL_STATIC_LIBRARIES := libsparse libz
+LOCAL_STATIC_LIBRARIES := libsparse_host libz
 LOCAL_C_INCLUDES := $(libext2fs_c_includes)
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(libext2fs_c_includes)
 LOCAL_CFLAGS := $(libext2fs_cflags) $(libext2fs_cflags_linux)

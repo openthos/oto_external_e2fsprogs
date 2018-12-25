@@ -44,7 +44,7 @@ add_ext4_encrypt_src_files := \
 	add_ext4_encrypt.c
 
 add_ext4_encrypt_c_includes := \
-	external/e2fsprogs/lib
+	$(LOCAL_PATH)/../lib
 
 add_ext4_encrypt_cflags := -O2 -g -W -Wall
 
@@ -79,4 +79,4 @@ LOCAL_MODULE_TAGS := optional
 include $(BUILD_HOST_EXECUTABLE)
 
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+#include $(call all-makefiles-under,$(LOCAL_PATH))

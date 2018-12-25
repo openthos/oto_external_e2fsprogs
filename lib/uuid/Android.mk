@@ -13,7 +13,7 @@ libext2_uuid_src_files := \
 	uuid_time.c
 
 
-libext2_uuid_c_includes := external/e2fsprogs/lib
+libext2_uuid_c_includes := $(LOCAL_PATH)/..
 
 libext2_uuid_cflags := -O2 -g -W -Wall \
 	-Wno-unused-function \
@@ -64,7 +64,7 @@ LOCAL_SRC_FILES := $(libext2_uuid_src_files)
 LOCAL_C_INCLUDES := $(libext2_uuid_c_includes)
 LOCAL_CFLAGS := $(libext2_uuid_cflags)
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
-LOCAL_MODULE := libext2_uuid-host
+LOCAL_MODULE := libext2_uuid_host
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_HOST_STATIC_LIBRARY)
