@@ -90,6 +90,7 @@ LOCAL_SHARED_LIBRARIES := $(tune2fs_shared_libraries)
 LOCAL_SYSTEM_SHARED_LIBRARIES := $(tune2fs_system_shared_libraries)
 LOCAL_MODULE := tune2fs
 LOCAL_MODULE_TAGS := optional
+LOCAL_POST_INSTALL_CMD := ln -sf $(LOCAL_MODULE) $(TARGET_OUT)/bin/e2label
 
 include $(BUILD_EXECUTABLE)
 
