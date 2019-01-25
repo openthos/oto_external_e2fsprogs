@@ -244,7 +244,7 @@ static errcode_t check_mntent(const char *file, int *mount_flags,
 	if (retval == 0 && (*mount_flags != 0))
 		return 0;
 #endif /* __linux__ */
-#if defined(MOUNTED) || defined(_PATH_MOUNTED)
+#if !defined(ANDROID) && (defined(MOUNTED) || defined(_PATH_MOUNTED))
 #ifndef MOUNTED
 #define MOUNTED _PATH_MOUNTED
 #endif /* MOUNTED */
